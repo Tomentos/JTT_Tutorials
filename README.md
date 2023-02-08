@@ -167,7 +167,6 @@ Date:   Wed Feb 8 19:43:25 2023 +0100
 ```
 Using the `git log` command, you get some basic information like who made the commit, when the commit was made, the commit message and in what branch the commit has been made. This tutorial still does not teach branches, so you can ignore those if you do not understand Git well enough yet.
 
-The most imortant thing when it comes to commits are the IDs. Everytime you need to work with a past commit, you need to provide the ID of the commit. However, you only ever need the last few symbols of the ID. So in this case `dcd507c6` is sufficient.
+The most imortant thing when it comes to commits are the IDs. Everytime you need to work with a past commit, you need to provide the ID of the commit. However, you only ever need the first few symbols of the ID. So in this case `dcd507c6` is sufficient.
 
 Now checking out this commit works the same way as checking out a tag would, except that you just use this above ID as a replacement for the name; like this: `git checkout dcd507c6`.
-
