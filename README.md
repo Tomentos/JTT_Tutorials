@@ -121,9 +121,9 @@ The tag will also be visible in the VSCode Checkout function. The Checkout Funct
 
 ## Tagging in the commandline
 
-The same process in the commandline is in my opinion a bit more straight forward. You only have to enter the following command:
+The same process in the commandline is in my opinion a bit more straight forward. Unlike VSCode, the commandline does not automatically replace spaces with dashes, so you have to do that yourself since spaces are not allowed in tag names. You only have to enter the following command:
 ```
-git tag -a "Git Basic Tutorial v0.1" -m "Created a Tutorial in Markdown that teaches how to set up and use commits in your project"
+git tag -a "GitBasicTutorial v0.1" -m "Created a Tutorial in Markdown that teaches how to set up and use commits in your project"
 ```
 
 ## Viewing the history of a project
