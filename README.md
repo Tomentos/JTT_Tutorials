@@ -94,7 +94,7 @@ After the changes have been marked, you just need to enter a commit message. Thi
 
 **Congratulations! you just made your first commit in git!**
 
-## Committing in the commandline
+### Committing in the commandline
 The commandline equivilents for staging and commiting and reverting are as follows:
 
 Staging
@@ -125,21 +125,81 @@ Creating tags is really simple. In VSCode, you can click a button to create one 
 
 The tag will also be visible in the VSCode Checkout function. The Checkout Function allows you to go back in the history of your project and see what it looked like at that specific point. I will talk about tahat a bit deeper in a second.
 
-## Tagging in the commandline
+### Tagging in the commandline
 The same process in the commandline is in my opinion a bit more straight forward. Unlike VSCode, the commandline does not automatically replace spaces with dashes, so you have to do that yourself since spaces are not allowed in tag names. You only have to enter the following command:
 ```
 git tag -a "Git-Basic-Tutorial-v0.1" -m "Created a Tutorial in Markdown that teaches how to set up and use commits in your project"
 ```
 
+## Pushing and Pulling your code with Git
+Now it is finally time to talk about the server state. When you want to upload your code to an online Codesharing platform, like GitHub or BitBucket, you need to push your code. This allows you to then pull your code on a different computer to continue working on the project, to share it with your teammates, or just to upload a new version of your project for public download alltogether. The term for server that you push and pull your code onto and off of is *remote*. I will use the term remote and server interchangeably in this chapter.
+
+### Push & Pull with VSCode
+You can add a remote simply by clicking the three dots in your source control again, navigating to "Remote" and then add a new remote.
+
+For any non-public server source, you will be able to enter the link to the remote and that's gonna be it. You will be promted for a login (if required by the server) when you push and pull the code.
+
+For public sources, like GitHub, things are a little different. GitHub is already integrated into most editors, so this makes things easier. You can simply click on the button offering you to add a GitHub remote. This will bring up a pop-up on which you have to press *"Allow"*. This will open a window in your browser, requesting you to log into GitHub. After doing that successfully, you will get a dropdown menu, allowing you to filter and choose from all repositories for which you have editing rights. If you enter a new name, it will automatically create that repository when you push the code.
+
+![img6](./img/img6.png "Documentation Image 6")
+
+After linking the remote, you can Push and Pull in the Source Control menu any time you want. Just click on the three dots again and pick what you need.
+
+![img7](./img/img7.png "Documentation Image 7")
+
+### Push & Pull in the commandline
+In the commandline, you can first also add a remote using the following command:
+```
+git remote add GitHub https://github.com/tomentos/JTT_GitBasics
+```
+**Important notice; GitHub has removed this type of remote support from it's service. Please use the GitHub Add-on to add a remote. I will merely use GitHub here as an example on how to use Push and Pull.**
+
+Now, after adding the remote, we can push our code onto this remote, we use this command:
+```
+git push GitHub
+```
+This is how you would normally do it. However, if you only have one single remote set up, you don't even need to specify the name. There is one problem to pushing however. By default, only the branch you are on is being pushed to the remote, and the tags are being ignored too. There is no option to push both, without also pushing data that might be exclusive to your client, like the remotes itself. Different workstations might have different remotes. Here are the commands for doing all different options:
+
+Push all branches
+```
+git push GitHub --all
+```
+
+Push all tags
+```
+git push GitHub --tags
+```
+
+Push everything
+```
+git push GitHub --mirror
+```
+
+When pulling, or downloading, all the latest changes from the remote you will do the same, except that you will replace `pull` with `push`. So it will look like this:
+
+Pull all branches
+```
+git pull GitHub --all
+```
+
+Pull all tags
+```
+git pull GitHub --tags
+```
+
+Pull everything
+```
+git pull GitHub --mirror
+```
 ## Viewing the history of a project
 There are multiple ways view the history in a git project. You can check out the past commits, or you can check out the Tags.
 
 Not that the checkout function is built into VSCode as well, but only shows you branches and Tags. However, when using the commandline, you can also check out every single commit individually.
 
-### Checkout tags
+### Checkout tags in VSCode
 You can access Tags by clicking on the small branch icon in the very bottom left of VSCode. Then a pop-up will appear with a selection of branches and tags. This tutorial does not teach branches, so you can ignore those if you do not understand Git well enough yet.
 
-![img6](./img/img6.png "Documentation Image #6")
+![img8](./img/img8.png "Documentation Image #8")
 
 ### Checkout tags in the commandline
 To Checkout a tag in commandline, you can use the following command:
