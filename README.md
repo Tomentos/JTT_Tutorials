@@ -83,7 +83,7 @@ After the changes have been marked, you just need to enter a commit message. Thi
 
 **Congratulations! you just made your first commit in git!**
 
-### Committing in the commandline
+## Committing in the commandline
 
 The commandline equivilents for staging and commiting and reverting are as follows:
 
@@ -116,7 +116,7 @@ Creating tags is really simple. In VSCode, you can click a button to create one 
 
 The tag will also be visible in the VSCode Checkout function. The Checkout Function allows you to go back in the history of your project and see what it looked like at that specific point. So let't talk about that a bit deeper now.
 
-### Tagging in the commandline
+## Tagging in the commandline
 
 The same process in the commandline is in my opinion a bit more straight forward. You only have to enter the following command:
 ```
@@ -134,7 +134,7 @@ You can access that by clicking on the small branch icon in the very bottom left
 
 ![img6](./img/img6.png "Documentation Image #6")
 
-#### Checkout tags in the commandline
+### Checkout tags in the commandline
 
 To Checkout a tag in commandline, you can use the following command:
 ```
@@ -170,3 +170,18 @@ Using the `git log` command, you get some basic information like who made the co
 The most imortant thing when it comes to commits are the IDs. Everytime you need to work with a past commit, you need to provide the ID of the commit. However, you only ever need the first few symbols of the ID. So in this case `dcd507c6` is sufficient.
 
 Now checking out this commit works the same way as checking out a tag would, except that you just use this above ID as a replacement for the name; like this: `git checkout dcd507c6`.
+
+Now you have basically travelled back in time to visit a previous state of your project. You can even change these previous things, I do not however, recommend that you do that just yet. If you want to edit your past commits, you should learn how to branch your project first, just to avoid things getting messy.
+
+To return to the latest point in your project, you can use `git checkout master`.
+
+## That's all folks
+
+It may not be everything that Git has to offer, but I would consider commits, tags and checkouts to be the bare basics of it.
+
+I hope this tutorial helped you a bit with getting to learn Git, use Git and stepping up your coding with Git. If this tutorial does well enough, and the request for it is there, I will gladly make another one where I teach about things like branches, merges, stashing, pulling and pushing your code.
+
+### Bonus
+This entire doc has been written in markdown using VSCode. So it would be a shame not to use this documentation itself on a live example on how to use Git! This documentation and all files associated with it will be made available on [my GitHub Page](https://github.com/tomentos). I did this so you can browse this project yourself and explore all the commits that I made while writing it. This ways you get a live example on how to use them and what they are useful for.
+
+If you still have any question, don't hesitate to ask and I will be glad to help!
