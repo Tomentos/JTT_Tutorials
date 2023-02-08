@@ -2,16 +2,16 @@
 ![Git_Logo](./img/logo.png "Git Logo")
 
 ## What is Git
-Git is a version control program made by Linux Torvalds (he’s also known for creating Linux). It’s main features are to easily track changes, features, versions and updates. There is much more that git can do, but I will keep this tutorial to the basics to not confuse or scare anyone off.
+Git is a version control program made by Linux Torvalds (he’s also known for creating Linux). It’s main features are to easily track changes, features, versions and updates of your code. There is much more that git can do, but I will keep this tutorial to the basics to not confuse or scare anyone off.
 
 Git is supported by most code editors. The ones that don’t natively support it most likely have an add-on to add support. Because of that, the interface for git can be different for every single editor that is being used. In this tutorial I will focus on commandline inputs and the Visual Studio Code interface for Git.
 
 ## Where to get Git
-Git can be downloaded directly for [the official website](https://git-scm.com/).
+Git can be downloaded directly from [the official website](https://git-scm.com/).
 
-There are options for different installers, operating systems and even portable versions depending on what is best for your system and your preferences!
+There are options for different installers, operating systems and even portable versions, depending on what is best for your system and your preferences!
 
-One important step that you should do before starting to use git is settings your name and email address. Since git is supposed to track who did what to the code, you need to provide some details on who you are. Note that you don't need to provide *real* data if you are not comfortable providing it. You can set the needed data using the following commands:
+One important step that you should do before starting to use git is setting your name and email address. Since git is supposed to track who did what to the code, you need to provide some details on who you are. Note that you don't need to provide *real* data if you are not comfortable providing it. You can set the needed data using the following commands:
 ```
 git config --global user.name "Your Name"
 git config --global user.email "your.email@address.com"
@@ -20,11 +20,13 @@ git config --global user.email "your.email@address.com"
 ## How to set up Git
 The first step is to install the file you just downloaded. If you are using the portable version, make sure that the extraction foler is in the `$PATH`.
 
-Git work with repositories. Repositories are basically just projects, that’s why for simplifications sake, I will use the two term interchangably in this documentation.
+Git works with repositories which are basically just projects. That’s why for simplifications sake, I will use the two terms interchangeably in this documentation.
 
-You declare the root folder (or main folder) of your project to git, and git will do the rest. You do that by making sure you are in the root folder of your project and then type the following command into your console: `git init`
+To initialize the project, you declare the root folder (or main folder) of your project to Git, and Git will do the rest. You do that in the following two different ways.
 
-This will give us the following output:
+### Initialize the project in commandline
+
+In the commandline, make sure you are in the root folder of your project and then type the following command into your console: `git init`. This will give us the following output:
 ```bash
 hint: Using 'master' as the name for the initial branch. This default branch name
 hint: is subject to change. To configure the initial branch name to use in all
@@ -38,8 +40,9 @@ hint:
 hint:   git branch -m <name>
 Initialized empty Git repository in /***************/JTT/GitBasics/.git/
 ```
+### Initialize the project in VSCode
 
-In VSCode, you can simply navigate to the Git Source Control on righthand panel and click `Initialize Repository`.
+In VSCode the root folder (or default folder) is automatically detected. You can simply navigate to the Git Source Control on righthand panel and click `Initialize Repository`.
 
 ![img1](./img/img1.png "Documentation Image #1")
 
@@ -71,13 +74,13 @@ You have different options for what you can do. You can revert the file into it'
 
 You can open the file. In larger projects with many files, it makes sense to not always have all of them open. So this button just opens the document at the exact place where a change has been made.
 
-You can stage the changes. Staging means that you declare a change as "ready to commit". That means if you press the bug `Commit` button at the top of the Git Source Control, the stashed changes will be commited.
+You can stage the changes. Staging means that you declare a change as "ready to commit". That means if you press the big `Commit` button at the top of the Git Source Control, the stashed changes will be commited.
 
-All of those options are not only available on a file level. You can go to the changed places with the `Open File` button and stash or revert every single line idividually. This is used when you have two individual changes in a file and want to mark just one of them as ready to commit while still working on the other.
+All of those options are not only available on a file level. You can go to the changed places with the `Open File` button and stash or revert every single line individually. This is used when you have two individual changes in a file and want to mark just one of them as ready to commit while still working on the other.
 
-You can also just mark every single change as ready to commit at once. This is a feature that is used not so often. In larger projects it only happens rarely that *everything* just so happens to be ready to commit at once. So this is only used in small projects where this might very well happen, like this one so let's do that.
+You can also just mark every single change as ready to commit at once. This is a feature that is used not so often. In larger projects it only happens rarely that *everything* just so happens to be ready to commit at once. This is only used in small projects where this might very well happen, like this one, so let's do that.
 
-After the changes have been marked, you just need to enter a commit message. This message should shortly explain what exactly you did to the code here. Note that you *cannot* commit changes *without* a commit message.
+After the changes have been marked, you just need to enter a commit message. This message should shortly explain what exactly you did to the code here.
 
 ![img4](./img/img4.png "Documentation Image #4")
 
@@ -114,7 +117,7 @@ Creating tags is really simple. In VSCode, you can click a button to create one 
 
 ![img5](./img/img5.png "Documentation Image #5")
 
-The tag will also be visible in the VSCode Checkout function. The Checkout Function allows you to go back in the history of your project and see what it looked like at that specific point. So let't talk about that a bit deeper now.
+The tag will also be visible in the VSCode Checkout function. The Checkout Function allows you to go back in the history of your project and see what it looked like at that specific point. I will talk about tahat a bit deeper in a second.
 
 ## Tagging in the commandline
 
@@ -125,12 +128,12 @@ git tag -a "Git Basic Tutorial v0.1" -m "Created a Tutorial in Markdown that tea
 
 ## Viewing the history of a project
 
-There are multiple ways view the history in a git project. You can check out the past commits, or you can check out the tags.
+There are multiple ways view the history in a git project. You can check out the past commits, or you can check out the Tags.
 
-Not that the checkout function is built into VSCode as well, but only shows you branches and tags. However, when using the commandline, you can also check out every single commit individually.
+Not that the checkout function is built into VSCode as well, but only shows you branches and Tags. However, when using the commandline, you can also check out every single commit individually.
 
 ### Checkout tags
-You can access that by clicking on the small branch icon in the very bottom left of VSCode. Then a pop-up will appear with a selection of branches and tags. This tutorial does not teach branches, so you can ignore those if you do not understand Git well enough yet.
+You can access Tags by clicking on the small branch icon in the very bottom left of VSCode. Then a pop-up will appear with a selection of branches and tags. This tutorial does not teach branches, so you can ignore those if you do not understand Git well enough yet.
 
 ![img6](./img/img6.png "Documentation Image #6")
 
@@ -171,7 +174,7 @@ The most imortant thing when it comes to commits are the IDs. Everytime you need
 
 Now checking out this commit works the same way as checking out a tag would, except that you just use this above ID as a replacement for the name; like this: `git checkout dcd507c6`.
 
-Now you have basically travelled back in time to visit a previous state of your project. You can even change these previous things, I do not however, recommend that you do that just yet. If you want to edit your past commits, you should learn how to branch your project first, just to avoid things getting messy.
+Now you have basically travelled back in time to visit a previous state of your project. Here you can do different things, like tagging from a past commit, copying code that was removed and you can even change these previous things. However, I do not recommend that you do that just yet. If you want to edit your past commits, you should learn how to branch your project first, just to avoid things getting messy.
 
 To return to the latest point in your project, you can use `git checkout master`.
 
