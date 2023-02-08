@@ -17,6 +17,25 @@ git config --global user.name "Your Name"
 git config --global user.email "your.email@address.com"
 ```
 
+## How Git works
+Git is tracking your code using four different states. There is `local`, `staging`, `commit` and `server`. These mean the following:
+
+- Local
+
+  Local means that the changes made to the code have not yet been tracked by git. These changes are only saved on your machine. This is also the only stage that will give you a visual indicator in Visual Studio Code, that there are active and untracked changes in your file while editing the code.
+
+- Staging
+
+  At the staging point, Git has started to track your changes. It has not written them fully into your project yet, but they are saved in Git. You have basically marked your changes as *"ready for commiting"*.
+
+- Commit
+
+  At this point, the code is *(supposedly)* final, working and officially written into the project. You can pretty much go by the name here. You have *committed* yourself to this code and can say that it is ready.
+
+- Server
+
+  Git is not only here to allow you to track changes. It is also used to share your code with others. The server state is when your code/project is not only on your computer anymore, but has been sent to other people that can now built on top of your code.
+
 ## How to set up Git
 The first step is to install the file you just downloaded. If you are using the portable version, make sure that the extraction foler is in the `$PATH`.
 
@@ -65,11 +84,11 @@ You have different options for what you can do. You can revert the file into it'
 
 You can open the file. In larger projects with many files, it makes sense to not always have all of them open. So this button just opens the document at the exact place where a change has been made.
 
-You can stage the changes. Staging means that you declare a change as "ready to commit". That means if you press the big `Commit` button at the top of the Git Source Control, the stashed changes will be commited.
+You can stage the changes. Stashed changes will be commited, once you press the big `Commit` button at the top of the Git Source Control.
 
-All of those options are not only available on a file level. You can go to the changed places with the `Open File` button and stash or revert every single line individually. This is used when you have two individual changes in a file and want to mark just one of them as ready to commit while still working on the other.
+All of those options are not only available on a file level. You can go to the changed places with the `Open File` button and stash or revert every single line individually. This is used when you have two individual changes in a file and want to stage just one of them while still working on the other.
 
-You can also just mark every single change as ready to commit at once. This is a feature that is used not so often. In larger projects it only happens rarely that *everything* just so happens to be ready to commit at once. This is only used in small projects where this might very well happen, like this one, so let's do that.
+You can also just stage every single change at once. This is a feature that is used not so often. In larger projects it only happens rarely that *everything* just so happens to be ready to commit at once. This is only used in small projects where this might very well happen, like this one, so let's do that.
 
 After the changes have been marked, you just need to enter a commit message. This message should shortly explain what exactly you did to the code here.
 
