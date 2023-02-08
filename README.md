@@ -58,7 +58,7 @@ In this scenario this means the following; The files marked with a green `U` are
 
 ![img3](./img/img3.png "Documentation Image #3")
 
-In this example there is only the green `U`, but there are some more indicators of changed files. You will see those in later parts of the tutorial. I will list them all here real quick:
+In this example there is only the green `U`, but there are some more indicators of changed files. I will list them all here real quick:
 
 - Green U - Newly created
 - Orange M - Modified
@@ -80,3 +80,36 @@ You can also just mark every single change as ready to commit at once. This is a
 After the changes have been marked, you just need to enter a commit message. This message should shortly explain what exactly you did to the code here. Note that you *cannot* commit changes *without* a commit message.
 
 ![img4](./img/img4.png "Documentation Image #4")
+
+**Congratulations! you just made your first commit in git!**
+
+### Committing in the commandline
+
+The commandline equivilents for staging and commiting and reverting are as follows:
+
+Staging
+```
+git add "file"
+```
+
+Commiting
+```
+git commit -m "Commit Message"
+```
+
+Reverting
+```
+git revert "file"
+```
+
+## Tagging with git
+
+What's the difference between tagging and commiting?
+
+With a commit, you sum up different edits in your project and explain what these changes do.
+
+With a tag, you sum up different commits in your project and add these changes to a new overall version of the program.
+
+Creating tags is really simple. In VSCode, you can click a button to create one for you. It is in the Git Source Control, under the three little dots in the Tags category. You will be prompted to give the Tag a name and a description.
+
+The tag will also be visible in the VSCode Checkout function. You can access that by clicking on the small branch icon in the very bottom left of VSCode. Then a pop-up will appear with a selection of branches and tags. This tutorial does not teach branches, so you can ignore those if you do not understand Git well enough yet.
