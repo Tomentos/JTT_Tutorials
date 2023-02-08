@@ -1,4 +1,5 @@
 # Welcome to this short tutorial on Git
+
 ![Git_Logo](./img/logo.png "Git Logo")
 
 ## What is Git
@@ -44,13 +45,11 @@ Git works with repositories which are basically just projects. That’s why for 
 To initialize the project, you declare the root folder (or main folder) of your project to Git, and Git will do the rest. You do that in the following two different ways.
 
 ### Initialize the project in commandline
-
 In the commandline, make sure you are in the root folder of your project and then type the following command into your console: `git init`. This will give us the following output:
 ```
 Initialized empty Git repository in /***************/JTT/GitBasics/.git/
 ```
 ### Initialize the project in VSCode
-
 In VSCode the root folder (or default folder) is automatically detected. You can simply navigate to the Git Source Control on righthand panel and click `Initialize Repository`.
 
 ![img1](./img/img1.png "Documentation Image #1")
@@ -64,7 +63,6 @@ Git should be the only thing to access this folder directly. Any manual change c
 ![img2](./img/img2.png "Documentation Image #2")
 
 ## How to use git
-
 Now you can start to code. And as you go on, you will notice certain cues in your editor. In this example case, I have files that are marked green with a letter `U` and a notification saying `4` on the Git Source Control panel.
 
 In this scenario this means the following; The files marked with a green `U` are the files that have been newly created. The `4` on the Git Source Control means that Git has detected `4` new changes in this project.
@@ -97,7 +95,6 @@ After the changes have been marked, you just need to enter a commit message. Thi
 **Congratulations! you just made your first commit in git!**
 
 ## Committing in the commandline
-
 The commandline equivilents for staging and commiting and reverting are as follows:
 
 Staging
@@ -116,7 +113,6 @@ git revert "file"
 ```
 
 ## Tagging with git
-
 What's the difference between tagging and commiting?
 
 With a commit, you sum up different edits in your project and explain what these changes do.
@@ -130,14 +126,12 @@ Creating tags is really simple. In VSCode, you can click a button to create one 
 The tag will also be visible in the VSCode Checkout function. The Checkout Function allows you to go back in the history of your project and see what it looked like at that specific point. I will talk about tahat a bit deeper in a second.
 
 ## Tagging in the commandline
-
 The same process in the commandline is in my opinion a bit more straight forward. Unlike VSCode, the commandline does not automatically replace spaces with dashes, so you have to do that yourself since spaces are not allowed in tag names. You only have to enter the following command:
 ```
 git tag -a "Git-Basic-Tutorial-v0.1" -m "Created a Tutorial in Markdown that teaches how to set up and use commits in your project"
 ```
 
 ## Viewing the history of a project
-
 There are multiple ways view the history in a git project. You can check out the past commits, or you can check out the Tags.
 
 Not that the checkout function is built into VSCode as well, but only shows you branches and Tags. However, when using the commandline, you can also check out every single commit individually.
@@ -148,14 +142,12 @@ You can access Tags by clicking on the small branch icon in the very bottom left
 ![img6](./img/img6.png "Documentation Image #6")
 
 ### Checkout tags in the commandline
-
 To Checkout a tag in commandline, you can use the following command:
 ```
 git checkout Git-Basic-Tutorial-v0.1
 ```
 
 ### Checkout commits
-
 Checking out commits is only possible in the commandline.
 
 You can type the following command in the console to get the commit history printed: `git log`
@@ -189,10 +181,9 @@ Now you have basically travelled back in time to visit a previous state of your 
 To return to the latest point in your project, you can use `git checkout master`.
 
 ## That's all folks
-
 It may not be everything that Git has to offer, but I would consider commits, tags and checkouts to be the bare basics of it.
 
-I hope this tutorial helped you a bit with getting to learn Git, use Git and stepping up your coding with Git. If this tutorial does well enough, and the request for it is there, I will gladly make another one where I teach about things like branches, merges, stashing, pulling and pushing your code.
+I hope this tutorial helped you a bit with getting to learn Git, use Git and stepping up your coding with Git. If this tutorial does well enough, and the request for it is there, I will gladly make another one where I teach about more things you can do with Git.
 
 ### Bonus
 This entire doc has been written in markdown using VSCode. So it would be a shame not to use this documentation itself on a live example on how to use Git! This documentation and all files associated with it will be made available on [my GitHub Page](https://github.com/Tomentos/JTT_GitBasics). I did this so you can browse this project yourself and explore all the commits that I made while writing it. This ways you get a live example on how to use them and what they are useful for.
