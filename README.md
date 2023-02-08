@@ -139,7 +139,7 @@ You can add a remote simply by clicking the three dots in your source control ag
 
 For any non-public server source, you will be able to enter the link to the remote and that's gonna be it. You will be promted for a login (if required by the server) when you push and pull the code.
 
-For public sources, like GitHub, things are a little different. GitHub is already integrated into most editors, so this makes things easier. You can simply click on the button offering you to add a GitHub remote. This will bring up a pop-up on which you have to press *"Allow"*. This will open a window in your browser, requesting you to log into GitHub. After doing that successfully, you will get a dropdown menu, allowing you to filter and choose from all repositories for which you have editing rights. If you enter a new name, it will automatically create that repository when you push the code.
+For public sources, like GitHub, things are a little different. GitHub is already integrated into most editors, so this makes things easier. You can simply click on the button offering you to add a GitHub remote. This will bring up a pop-up on which you have to press *"Allow"*. This will open a window in your browser, requesting you to log into GitHub. After doing that successfully, you will get a dropdown menu, allowing you to filter and choose from all repositories for which you have editing rights.
 
 ![img6](./img/img6.png "Documentation Image 6")
 
