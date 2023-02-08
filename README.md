@@ -51,6 +51,7 @@ You may not see anything change in your project. This is because the files are h
 ***DO NOT EDIT ANYTHING IN THIS FOLDER MANUALLY***
 
 Git should be the only thing to access this folder directly. Any manual change can completely break your entire repository.
+
 ![img2](./img/img2.png "Documentation Image #2")
 
 ## How to use git
@@ -185,6 +186,6 @@ It may not be everything that Git has to offer, but I would consider commits, ta
 I hope this tutorial helped you a bit with getting to learn Git, use Git and stepping up your coding with Git. If this tutorial does well enough, and the request for it is there, I will gladly make another one where I teach about things like branches, merges, stashing, pulling and pushing your code.
 
 ### Bonus
-This entire doc has been written in markdown using VSCode. So it would be a shame not to use this documentation itself on a live example on how to use Git! This documentation and all files associated with it will be made available on [my GitHub Page](https://github.com/tomentos). I did this so you can browse this project yourself and explore all the commits that I made while writing it. This ways you get a live example on how to use them and what they are useful for.
+This entire doc has been written in markdown using VSCode. So it would be a shame not to use this documentation itself on a live example on how to use Git! This documentation and all files associated with it will be made available on [my GitHub Page](https://github.com/Tomentos/JTT_GitBasics). I did this so you can browse this project yourself and explore all the commits that I made while writing it. This ways you get a live example on how to use them and what they are useful for.
 
 If you still have any question, don't hesitate to ask and I will be glad to help!
