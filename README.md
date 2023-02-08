@@ -26,6 +26,7 @@ You declare the root folder (or main folder) of your project to git, and git wil
 
 This will give us the following output:
 ```bash
+[thomas@Thomas-ArchPC Git Basics]$ git init
 hint: Using 'master' as the name for the initial branch. This default branch name
 hint: is subject to change. To configure the initial branch name to use in all
 hint: of your new repositories, which will suppress this warning, call:
@@ -36,7 +37,7 @@ hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
 hint: 'development'. The just-created branch can be renamed via this command:
 hint: 
 hint:   git branch -m <name>
-Initialized empty Git repository in /***************/JTT/GitBasics/.git/
+Initialized empty Git repository in /home/thomas/Documents/Coding/JoiceTechTutorials/Git Basics/.git/
 ```
 
 In VSCode, you can simply navigate to the Git Source Control on righthand panel and click `Initialize Repository`.
@@ -110,6 +111,22 @@ With a commit, you sum up different edits in your project and explain what these
 
 With a tag, you sum up different commits in your project and add these changes to a new overall version of the program.
 
-Creating tags is really simple. In VSCode, you can click a button to create one for you. It is in the Git Source Control, under the three little dots in the Tags category. You will be prompted to give the Tag a name and a description.
+Creating tags is really simple. In VSCode, you can click a button to create one for you. It is in the Git Source Control, under the three little dots in the Tags category. You will be prompted to give the Tag a name and a description. Tagging is generally used for new releases of a software, so it is important to make sure there is no unfinished code in the project.
 
-The tag will also be visible in the VSCode Checkout function. You can access that by clicking on the small branch icon in the very bottom left of VSCode. Then a pop-up will appear with a selection of branches and tags. This tutorial does not teach branches, so you can ignore those if you do not understand Git well enough yet.
+![img5](./img/img5.png "Documentation Image #5")
+
+The tag will also be visible in the VSCode Checkout function. The Checkout Function allows you to go back in the history of your project and see what it looked like at that specific point. You can access that by clicking on the small branch icon in the very bottom left of VSCode. Then a pop-up will appear with a selection of branches and tags. This tutorial does not teach branches, so you can ignore those if you do not understand Git well enough yet.
+
+![img6](./img/img6.png "Documentation Image #6")
+
+### Tagging in the commandline
+
+The same process in the commandline is in my opinion a bit more straight forward. You only have to enter the following command:
+```
+git tag -a "Git Basic Tutorial v0.1" -m "Created a Tutorial in Markdown that teaches how to set up and use commits in your project"
+```
+
+To Checkout the tag in commandline, you can use the following command:
+```
+git checkout Git-Basic-Tutorial-v0.1
+```
