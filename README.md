@@ -26,7 +26,6 @@ You declare the root folder (or main folder) of your project to git, and git wil
 
 This will give us the following output:
 ```bash
-[thomas@Thomas-ArchPC Git Basics]$ git init
 hint: Using 'master' as the name for the initial branch. This default branch name
 hint: is subject to change. To configure the initial branch name to use in all
 hint: of your new repositories, which will suppress this warning, call:
@@ -37,7 +36,7 @@ hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
 hint: 'development'. The just-created branch can be renamed via this command:
 hint: 
 hint:   git branch -m <name>
-Initialized empty Git repository in /home/thomas/Documents/Coding/JoiceTechTutorials/Git Basics/.git/
+Initialized empty Git repository in /***************/JTT/GitBasics/.git/
 ```
 
 In VSCode, you can simply navigate to the Git Source Control on righthand panel and click `Initialize Repository`.
@@ -115,9 +114,7 @@ Creating tags is really simple. In VSCode, you can click a button to create one 
 
 ![img5](./img/img5.png "Documentation Image #5")
 
-The tag will also be visible in the VSCode Checkout function. The Checkout Function allows you to go back in the history of your project and see what it looked like at that specific point. You can access that by clicking on the small branch icon in the very bottom left of VSCode. Then a pop-up will appear with a selection of branches and tags. This tutorial does not teach branches, so you can ignore those if you do not understand Git well enough yet.
-
-![img6](./img/img6.png "Documentation Image #6")
+The tag will also be visible in the VSCode Checkout function. The Checkout Function allows you to go back in the history of your project and see what it looked like at that specific point. So let't talk about that a bit deeper now.
 
 ### Tagging in the commandline
 
@@ -126,7 +123,51 @@ The same process in the commandline is in my opinion a bit more straight forward
 git tag -a "Git Basic Tutorial v0.1" -m "Created a Tutorial in Markdown that teaches how to set up and use commits in your project"
 ```
 
-To Checkout the tag in commandline, you can use the following command:
+## Viewing the history of a project
+
+There are multiple ways view the history in a git project. You can check out the past commits, or you can check out the tags.
+
+Not that the checkout function is built into VSCode as well, but only shows you branches and tags. However, when using the commandline, you can also check out every single commit individually.
+
+### Checkout tags
+You can access that by clicking on the small branch icon in the very bottom left of VSCode. Then a pop-up will appear with a selection of branches and tags. This tutorial does not teach branches, so you can ignore those if you do not understand Git well enough yet.
+
+![img6](./img/img6.png "Documentation Image #6")
+
+#### Checkout tags in the commandline
+
+To Checkout a tag in commandline, you can use the following command:
 ```
 git checkout Git-Basic-Tutorial-v0.1
 ```
+
+### Checkout commits
+
+Checking out commits is only possible in the commandline.
+
+You can type the following command in the console to get the commit history printed: `git log`
+```
+commit 7aaead9e5c68f13fb76ba68ea53ff7b47935927a (HEAD -> master)
+Author: Tomentos <<**********@@gmail.com>
+Date:   Wed Feb 8 19:48:47 2023 +0100
+
+    Added images and commandline to tagging doc
+
+commit 67d02d9d5e36c837256e86a68dd363cb53c5369c
+Author: Tomentos <<**********@@gmail.com>
+Date:   Wed Feb 8 19:44:38 2023 +0100
+
+    Added a short description for tagging
+
+commit dcd507c6fe88f10a849bc5737fe74568a1c21497
+Author: Tomentos <**********@gmail.com>
+Date:   Wed Feb 8 19:43:25 2023 +0100
+
+    Created and written doc up until how to commit
+```
+Using the `git log` command, you get some basic information like who made the commit, when the commit was made, the commit message and in what branch the commit has been made. This tutorial still does not teach branches, so you can ignore those if you do not understand Git well enough yet.
+
+The most imortant thing when it comes to commits are the IDs. Everytime you need to work with a past commit, you need to provide the ID of the commit. However, you only ever need the last few symbols of the ID. So in this case `dcd507c6` is sufficient.
+
+Now checking out this commit works the same way as checking out a tag would, except that you just use this above ID as a replacement for the name; like this: `git checkout dcd507c6`.
+
