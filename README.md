@@ -27,17 +27,7 @@ To initialize the project, you declare the root folder (or main folder) of your 
 ### Initialize the project in commandline
 
 In the commandline, make sure you are in the root folder of your project and then type the following command into your console: `git init`. This will give us the following output:
-```bash
-hint: Using 'master' as the name for the initial branch. This default branch name
-hint: is subject to change. To configure the initial branch name to use in all
-hint: of your new repositories, which will suppress this warning, call:
-hint: 
-hint:   git config --global init.defaultBranch <name>
-hint: 
-hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-hint: 'development'. The just-created branch can be renamed via this command:
-hint: 
-hint:   git branch -m <name>
+```
 Initialized empty Git repository in /***************/JTT/GitBasics/.git/
 ```
 ### Initialize the project in VSCode
@@ -124,7 +114,7 @@ The tag will also be visible in the VSCode Checkout function. The Checkout Funct
 
 The same process in the commandline is in my opinion a bit more straight forward. Unlike VSCode, the commandline does not automatically replace spaces with dashes, so you have to do that yourself since spaces are not allowed in tag names. You only have to enter the following command:
 ```
-git tag -a "GitBasicTutorial v0.1" -m "Created a Tutorial in Markdown that teaches how to set up and use commits in your project"
+git tag -a "Git-Basic-Tutorial-v0.1" -m "Created a Tutorial in Markdown that teaches how to set up and use commits in your project"
 ```
 
 ## Viewing the history of a project
@@ -152,13 +142,13 @@ Checking out commits is only possible in the commandline.
 You can type the following command in the console to get the commit history printed: `git log`
 ```
 commit 7aaead9e5c68f13fb76ba68ea53ff7b47935927a (HEAD -> master)
-Author: Tomentos <<**********@@gmail.com>
+Author: Tomentos <**********@gmail.com>
 Date:   Wed Feb 8 19:48:47 2023 +0100
 
     Added images and commandline to tagging doc
 
 commit 67d02d9d5e36c837256e86a68dd363cb53c5369c
-Author: Tomentos <<**********@@gmail.com>
+Author: Tomentos <**********@gmail.com>
 Date:   Wed Feb 8 19:44:38 2023 +0100
 
     Added a short description for tagging
