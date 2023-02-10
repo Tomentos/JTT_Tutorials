@@ -50,7 +50,7 @@ In the commandline, make sure you are in the root folder of your project and the
 Initialized empty Git repository in /***************/JTT/GitBasics/.git/
 ```
 ### Initialize the project in VSCode
-In VSCode the root folder (or default folder) is automatically detected. You can simply navigate to the Git Source Control on righthand panel and click `Initialize Repository`.
+In VSCode the root folder (or default folder) is automatically detected. You can simply navigate to the Git Source Control on lefthand panel and click `Initialize Repository`.
 
 ![img1](./img/img1.png "Documentation Image #1")
 
