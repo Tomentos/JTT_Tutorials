@@ -3,7 +3,7 @@
 ![Git_Logo](./img/logo.png "Git Logo")
 
 ## What is Git
-Git is a version control program made by Linux Torvalds (he’s also known for creating Linux). It’s main features are to easily track changes, features, versions and updates of your code. There is much more that git can do, but I will keep this tutorial to the basics to not confuse or scare anyone off.
+Git is a version control program made by Linus Torvalds (he’s also known for creating Linux). It’s main features are to easily track changes, features, versions and updates of your code. There is much more that git can do, but I will keep this tutorial to the basics to not confuse or scare anyone off.
 
 Git is supported by most code editors. The ones that don’t natively support it most likely have an add-on to add support. Because of that, the interface for git can be different for every single editor that is being used. In this tutorial I will focus on commandline inputs and the Visual Studio Code interface for Git.
 
@@ -23,11 +23,11 @@ Git is tracking your code using four different states. There is `local`, `stagin
 
 - Local
 
-  Local means that the changes made to the code have not yet been tracked by git. These changes are only saved on your machine. This is also the only stage that will give you a visual indicator in Visual Studio Code, that there are active and untracked changes in your file while editing the code.
+  Local means that whatever you are writing right now, is being recognized by git. An indicator for this are different colored file names and marked lines in your editor. But you have not yet told git to save your changes in the code, i.e. you have not staged your changes yet.
 
 - Staging
 
-  At the staging point, Git has started to track your changes. It has not written them fully into your project yet, but they are saved in Git. You have basically marked your changes as *"ready for commiting"*.
+  At the staging point, Git has saved your changes. It has not written them fully into your project yet, but they are saved in Git and the manipulated or written lines of code are not showing in your editor anymore. You have basically marked your changes as *"ready for commiting"*.
 
 - Commit
 
@@ -82,9 +82,9 @@ You have different options for what you can do. You can revert the file into it'
 
 You can open the file. In larger projects with many files, it makes sense to not always have all of them open. So this button just opens the document at the exact place where a change has been made.
 
-You can stage the changes. Stashed changes will be commited, once you press the big `Commit` button at the top of the Git Source Control.
+You can stage the changes. Staged changes will be commited, once you press the big `Commit` button at the top of the Git Source Control.
 
-All of those options are not only available on a file level. You can go to the changed places with the `Open File` button and stash or revert every single line individually. This is used when you have two individual changes in a file and want to stage just one of them while still working on the other.
+All of those options are not only available on a file level. You can go to the changed places with the `Open File` button and stage or revert every single line individually. This is used when you have two individual changes in a file and want to stage just one of them while still working on the other.
 
 You can also just stage every single change at once. This is a feature that is used not so often. In larger projects it only happens rarely that *everything* just so happens to be ready to commit at once. This is only used in small projects where this might very well happen, like this one, so let's do that.
 
@@ -117,7 +117,7 @@ What's the difference between tagging and commiting?
 
 With a commit, you sum up different edits in your project and explain what these changes do.
 
-With a tag, you sum up different commits in your project and add these changes to a new overall version of the program.
+With a tag, you basically only mark a specific commit in your project. This gives you the ability to give a proper name to a commit and it will be way easier to find later on. This is often used to mark a new version of the program itself and it's also what I will be using it for in this example.
 
 Creating tags is really simple. In VSCode, you can click a button to create one for you. It is in the Git Source Control, under the three little dots in the Tags category. You will be prompted to give the Tag a name and a description. Tagging is generally used for new releases of a software, so it is important to make sure there is no unfinished code in the project.
 
@@ -232,7 +232,7 @@ Date:   Wed Feb 8 19:43:25 2023 +0100
 ```
 Using the `git log` command, you get some basic information like who made the commit, when the commit was made, the commit message and in what branch the commit has been made. This tutorial still does not teach branches, so you can ignore those if you do not understand Git well enough yet.
 
-The most imortant thing when it comes to commits are the IDs. Everytime you need to work with a past commit, you need to provide the ID of the commit. However, you only ever need the first few symbols of the ID. So in this case `dcd507c6` is sufficient.
+The most important thing when it comes to commits are the IDs. Everytime you need to work with a past commit, you need to provide the ID of the commit. However, you only ever need the first few symbols of the ID. So in this case `dcd507c6` is sufficient.
 
 Now checking out this commit works the same way as checking out a tag would, except that you just use this above ID as a replacement for the name; like this: `git checkout dcd507c6`.
 
