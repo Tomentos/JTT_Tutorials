@@ -243,9 +243,9 @@ To return to the latest point in your project, you can use `git checkout master`
 ## That's all folks
 It may not be everything that Git has to offer, but I would consider commits, tags and checkouts to be the bare basics of it.
 
-I hope this tutorial helped you a bit with getting to learn Git, use Git and stepping up your coding with Git. If this tutorial does well enough, and the request for it is there, I will gladly make another one where I teach about more things you can do with Git.
+I hope this tutorial helped you a bit with getting to learn Git, use Git and stepping up your coding with Git. If this tutorial does well enough, and the demand for it is there, I will gladly make another one where I teach about more things you can do with Git.
 
 ### Bonus
-This entire doc has been written in markdown using VSCode. So it would be a shame not to use this documentation itself on a live example on how to use Git! This documentation and all files associated with it will be made available on [my GitHub Page](https://github.com/Tomentos/JTT_GitBasics). I did this so you can browse this project yourself and explore all the commits that I made while writing it. This ways you get a live example on how to use them and what they are useful for.
+This entire doc has been written in markdown using VSCode. So it would be a shame not to use this documentation itself for a live example on how to use Git! This documentation and all files associated with it will be made available on [my GitHub Page](https://github.com/Tomentos/JTT_Tutorials/JTT_GitBasics/JTT_GitBasics.md). I did this so you can browse this project yourself and explore all the commits that I made while writing it. This way you get a live example on how to use them and what they are useful for.
 
 If you still have any question, don't hesitate to ask and I will be glad to help!
