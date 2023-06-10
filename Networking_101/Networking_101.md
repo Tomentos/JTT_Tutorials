@@ -67,7 +67,7 @@ I will explain how all the layers are related shortly here.
 | Layer     | Example                                                                                                                                   |
 |:--------- |:----------------------------------------------------------------------------------------------------------------------------------------- |
 | Layer 1   | You have a laptop and you plug in your cable into a nearby network port.                                                                  |
-| Layer 2   | A device recognizes that something has been plugged into the network port. Your device is sending a request to be part of the network.    |
+| Layer 2   | The port recognized something being plugged in. Your device is sending a request to be part of the network.                               |
 | Layer 3   | Your device receives it's Address and is nor registered in the network.                                                                   |
 | Layer 4   | Your device is receiving packages and can connect to the network.                                                                         |
 | Layer 5   | You open a website on your laptop, sending a signal to the website, requesting the data to load it.                                       |
