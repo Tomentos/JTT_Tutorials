@@ -90,7 +90,7 @@ As you can see in the above table, Class A ranges all the way to 127. But please
 ## Subnets and Hosts
 I have mentioned networks and their size before. Just above in the table describing the private IPv4 Address Ranges, I used a slash with a number to indicate the network size, but how is any of that actually calculated? How do you look at that number and think "Ah yes, Network *big*". For that we need to recap the Binary Chapter. So if you didn't understand that yet, good luck ahead buddy.
 
-We've discussed that an IP Address consists of 32 bits, seperated into 4 octaved, so there's 4 times 8 bits. The Slash and the number is what we call a Subnet Mask, and it is basically another IP Address, all though it works very differently. An IP Address can have any value from *zero* (0) to 255. A Subnet mask can have only 8 values per octave and a total of 32 values in general. That is because it is filled up from the left to the right.
+We've discussed that an IP Address consists of 32 bits, seperated into 4 octaves, so there's 4 times 8 bits. The Slash and the number is what we call a Subnet Mask, and it is basically another IP Address, all though it works very differently. An IP Address can have any value from *zero* (0) to 255. A Subnet mask can have only 8 values per octave and a total of 32 values in general. That is because it is filled up from the left to the right.
 
 | Subnet Mask Binary | Subnet Mask Decimal |
 |:-------------------|---------------------|
@@ -121,18 +121,67 @@ In the above example you should be able to see exactly on which bits the Subnet 
 Again here, I know this is a very complex topic and I can only explain so much and give so many examples. So if there is confusion going on here with a will to learn more, @ me on the server and I'll help out to my best ability.
 
 ### Hosts
-The Amount of Hosts in a Network is calculated rather simply. If we take the example from abox again, with the Subnet Mask of `255.255.224.0`, specifically the Binary Version of it, we only need to count the amount of *zeroes* (0) in it. in this case that would be 13. We have 13 zeroes in the binary version of our Subnet Mask. Now we can use that number as the power of *two* (2) and subtract 2 from the result. So we calculate `2^13-2`.
+The Amount of Hosts in a Network is calculated rather simply. If we take the example from abox again, with the Subnet Mask of `255.255.224.0`, specifically the Binary Version of it, we only need to count the amount of *zeroes* (0) in it. in this case that would be 13. We have 13 zeroes in the binary version of our Subnet Mask. Now we can use that number as the power of *two* (2) and subtract *two* (2) from the result. So we calculate `2^13-2`.
 
 That calculation is basically the same as the one that gives us the total amount of IP Addresses that exist. But only limited to the 13 zeroes in the subnet mask that we can manipulate in our Network. Then we subtract two because every Network has a Network Address and a Broadcast Address that we cannot use. That leaves us with the total amount of usable IP Addresses in our Network, which are also called Hosts.
 
 ---
 
 ## Network Address
+The Network Address is always the lowest possible Address in any Network. It is used to identify the very Network itself, hence the name Network Address. I would like to remind you of a previous chapter now. The **IPv4 Address Ranges**. In the three examples I have listed there, for every one of them, the Network Address is the lowest possible Address which was listed.
+
+Now it's easy to look at the and think *I understand* but actually calculating it from an IP Address and Subnet Mask might not be. This and the Broadcast Address, which will follow this chapter, have been the one thing I always struggled to explain to others. I promise you that it's not that hard once you get it, but you can't explain it in a very straight forward way.
+
+Now I'd like to remind you of another previous chapter, **Subnets and Hosts**. In that chapter I have said, *"you can only manipulate the bits in the IP Address that correlate to a zero (0) in the Subnet Mask*". What you need to do is set every single one of those manipulatable bits to a zero. I will copy the exact IP Address from that chapter to explain it better.
+
+```
+IP Address: 192.168.10.100
+Subnet Mask: 255.255.224.0
+
+IP Address Binary:      11000000.10101000.000|01010.01100100
+Subnet Mask Binary:     11111111.11111111.111|00000.00000000
+                                             |
+Network Address Binary: 11000000.10101000.000|00000.00000000
+```
+
+So in this example, the Network Address then translates back to *192.168.0.0*. This then results in the lowest IP Address in the entire Network and one of the two we subtraced in the Hosts calculation.
 
 ---
 
 ## Broadcast Address
+The use of the Broadcast ID is also very straight forward. Anything that goes through this ID, will be send to every single client which is connected to the Network. It's used to broadcast messages throughout the Network. The Broadcast Address is calculated very similairly to the Network Address. The only difference is that the manipulatable bits are set to *one* (1) instead of *zero* (0). I wont dance around a redundant explaination too long and directly show you the above example again.
+
+```
+IP Address: 192.168.10.100
+Subnet Mask: 255.255.224.0
+
+IP Address Binary:        11000000.10101000.000|01010.01100100
+Subnet Mask Binary:       11111111.11111111.111|00000.00000000
+                                               |
+Broadcast Address Binary: 11000000.10101000.000|11111.11111111
+```
+
+In this case the Broadcast Address translates back to *192.168.31.255*. This is the higest possible IP Address in that Network. It is also the second IP-Address that we subtract from the Hosts calculation.
 
 ---
 
 ## Network-ID
+The Network-ID is a weird one. It exists. I have never in my entire career seen the Network-ID used even once outside of a theoretical test. It is calculated by subtracting the Network Address from the IP Address.
+
+```
+IP Address:      192.168.10.100
+Network Address: 192.168.0.0
+
+Network-ID:      0.0.10.100
+```
+
+You can think of the Network-ID as a localized Address inside of the Network. If you are inside of the *192.168.0.0* network, and you are talking to another client, you don't need to specify the *192.168.0.0* part. You can just identify yourself as *0.0.10.100* (or just *10.100*). At least that's what I believe what the idea of this ID is. In practice, it only creates confusion by obscuring details about the Network and even in the Backend of any program, the entire IP Address has to be spelled out because the IPv4 protocol doesn't work with half sized Addresses.
+
+My tip is, forget about it if you can. It creates more confusion than anything else. If you are in a course or in school and are required to know about it. Remember how to calculate it, but you don't need to remember the function of it. It doesn't really have any in practice.
+
+---
+
+## Outro
+That might have been quite a lot to process. I don't blame anyone who had problems understanding this. The IPv4 protocol is incredibly complex and these are just the basics of it. Next up would be Network Dimensioning. I have serious doubts if it'd even be worth it writing another Tutorial on how to do that. If you want to see that, let me know but also remember that I might switch it up entirely for my next tutorial.
+
+If there are any questions that I failed to answer, please @ me on Discord and I'll be happy to answer them. If no one does, I will think I did a good job here.
