@@ -1,4 +1,4 @@
-Networking 102 - No more swearing
+Networking 102 - The necessities
 Joyce said no 😔😔😔
 
 ***Please read Networking 101 before reading this Tutorial***

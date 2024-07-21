@@ -1,4 +1,4 @@
-# Networking 103 - I know where your PC lives
+# Networking 103 - IP Address Calculation
 43.19346307029371, -88.2664612175454
 
 ---
