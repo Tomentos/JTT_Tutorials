@@ -19,7 +19,7 @@
 ## Network Addressing Systems
 Back in the day, when Networks were new to the average family household, there were multiple different Network communication systems that were competing with each other. The most popular example today is Apples solution for Apple devices, called AppleTalk. In 1981 the global standard for Networking was set into stone and the IPv4 protocol became the norm for the OSI Networking Layer. Other Addresses like the MAC-Address also exist, but this example exists as the Norm for the OSI Data Link Layer. 
 
-Shorty after the IPv4 protocol became the norm, it's limitations already started as computers became more and more affordable and popular for the averade household. In 1992 the first description of the IPv4 address exhaustion was publicly made. The IPv4 protocol consists of 4 octaves, which all consist of 8 bits (hence the name octave). A bit is a value that can either be *one* (1) or *zero* (0), genererally describing the *On* and *Off* state. These 8 bits are then converted into the decimal system. Since each number is a representation of a binary octave, the highest number possible for each of these numbers in 255, with a total amount of 256 different numbers (because *zero* (0) counts as well). That leaves us with a total of 32 bits, with each bit having 2 different possible states. So the total number of IPv4 Addresses is `2^32`. Or if you want to represent it as the 4 different numbers, it's `256^4`. The result being `4,294,946,296` different IPv4 addresses.
+Shorty after the IPv4 protocol became the norm, it's limitations already started as computers became more and more affordable and popular for the average household. In 1992 the first description of the IPv4 address exhaustion was publicly made. The IPv4 protocol consists of 4 octaves, which all consist of 8 bits (hence the name octave). A bit is a value that can either be *one* (1) or *zero* (0), generally describing the *On* and *Off* state. These 8 bits are then converted into the decimal system. Since each number is a representation of a binary octave, the highest number possible for each of these numbers in 255, with a total amount of 256 different numbers (because *zero* (0) counts as well). That leaves us with a total of 32 bits, with each bit having 2 different possible states. So the total number of IPv4 Addresses is `2^32`. Or if you want to represent it as the 4 different numbers, it's `256^4`. The result being `4,294,946,296` different IPv4 addresses.
 
 4 billion addresses might sound like a lot, but in reality it is not at all, with many of these addresses not being able to be used. The entire space of 127.xxx.xxx.xxx being reserved for the localhost, and every single network having the Network Address and Broadcast Address, which are both fixed in place and have to exist. Now to put into perspective how many devices we already all have that all connect to the internet, take a look at this picture.
 
@@ -34,21 +34,21 @@ Now you might asking, *"How can it be then, that we still use mainly IPv4 to thi
 ---
 
 ## The Binary System
-Explaining what the binary system is, doesn't take very long. Displaying information with only *ones* (1) and *zeores* (0). How to read it, convert it and use it however, that's a different question with a different answer.
+Explaining what the binary system is, doesn't take very long. Displaying information with only *ones* (1) and *zeroes* (0). How to read it, convert it and use it however, that's a different question with a different answer.
 
-IPv4 Addresses builds up on the principle of Binary. Unlike the MAC-Address and IPv6 Addresses, which both build upon the Hexadecimal system. Now first we need to understand how exactly this system uses Binary. I already said above that it consts of 4 number segments, also called octaves, which in turn then consist on 8 bits, which are just binary characters. So each of these numbers can only go as high as 8 binary characters can go, which is 255. If we spread these 8 bits out, the leftmost bit has the lowest value. The value then doubles with every bit we add to the left. This tables attempts to visualize that to create a better understanding.
+IPv4 Addresses builds up on the principle of Binary. Unlike the MAC-Address and IPv6 Addresses, which both build upon the Hexadecimal system. Now first we need to understand how exactly this system uses Binary. I already said above that it consists of 4 number segments, also called octaves, which in turn then consist on 8 bits, which are just binary characters. So each of these numbers can only go as high as 8 binary characters can go, which is 255. If we spread these 8 bits out, the leftmost bit has the lowest value. The value then doubles with every bit we add to the left. This tables attempts to visualize that to create a better understanding.
 
-|                   | Bit #8 | Bit #7 | Bit #6 | Bit #5 | Bit #4 | Bit #3 | Bit #2 | Bit #1 |
+| | Bit #8 | Bit #7 | Bit #6 | Bit #5 | Bit #4 | Bit #3 | Bit #2 | Bit #1 |
 |:------------------|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|
-| **Binary Value**  | 1      | 1      | 1      | 1      | 1      | 1      | 1      | 1      |
-| **Decimal Value** | 128    | 64     | 32     | 16     | 8      | 4      | 2      | 1      |
+| **Binary Value** | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| **Decimal Value** | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 
 If we now add all the decimal values, you would get the number 255. Meaning that the Binary number of `11111111` equals to the decimal number `255`. I will now have a table below where not every binary position is 1 as an example for how the number would change.
 
-|                   | Bit #8 | Bit #7 | Bit #6 | Bit #5 | Bit #4 | Bit #3 | Bit #2 | Bit #1 |
+| | Bit #8 | Bit #7 | Bit #6 | Bit #5 | Bit #4 | Bit #3 | Bit #2 | Bit #1 |
 |:------------------|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|
-| **Binary Value**  | 1      | 1      | 0      | 0      | 1      | 0      | 1      | 0      |
-| **Decimal Value** | 128    | 64     | 0      | 0      | 8      | 0      | 2      | 0      |
+| **Binary Value** | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
+| **Decimal Value** | 128 | 64 | 0 | 0 | 8 | 0 | 2 | 0 |
 
 Every column in which the binary number is *zero* (0), the decimal number also turns into *zero* (0) as it is only a decimal representation. If you now add all these numbers together, you get 202. Meaning that the Binary number `11001010` equals to the decimal number `202`.
 
@@ -59,21 +59,21 @@ If you understand why and how these 8 digits interact and influence each other, 
 ## IPv4 Address Ranges
 I hinted at the fact that a lot of the Addresses in the IPv4 Protocol cannot be used. Of course, the Network Address, which is the address of the network itself, and the Broadcast Address, which is used to send something to every single used Address in the Network, are part of those unusable addresses, but they can't be considered a *range*.
 
-With a range, an actual static range of IP Addresses is meant. I already mentioned the Localhost range. The localhost range is simply every single address in which the first octave is `127`. You could technically specify it to the point of saying *"From the address of 127.0.0.0 to 127.255.255.255"* but..., come on. What's easier to remember. I'm putting my hand on *"First octave is 127"*. It's simply easier to remember and the other 3 octaves just really don't matter.
+With a range, an actual static range of IP Addresses is meant. I already mentioned the localhost range. The localhost range is simply every single address in which the first octave is `127`. You could technically specify it to the point of saying *"From the address of 127.0.0.0 to 127.255.255.255"* but..., come on. What's easier to remember. I'm putting my hand on *"First octave is 127"*. It's simply easier to remember and the other 3 octaves just really don't matter.
 
 When it comes to everything else, we have something called *Private Ranges* and *Public Ranges*.
 Private addresses are what your are using right now. I'm putting money on that fact. There's only *three* (3) different private ranges and they aren't that large.
 
-| Network         | Lowest IP Address in range | Highest IP Address in range |
+| Network | Lowest IP Address in range | Highest IP Address in range |
 |:----------------|:---------------------------|:----------------------------|
-| 10.0.0.0 /8     | 10.0.0.0                   | 10.255.255.255              |
-| 172.16.0.0 /12  | 172.16.0.0                 | 172.31.255.255              |
-| 192.168.0.0 /16 | 192.168.0.0                | 192.168.255.255             |
+| 10.0.0.0 /8 | 10.0.0.0 | 10.255.255.255 |
+| 172.16.0.0 /12 | 172.16.0.0 | 172.31.255.255 |
+| 192.168.0.0 /16 | 192.168.0.0 | 192.168.255.255 |
 
-These are all the ranges there are. These ranges are not directly connected to the internet, but are a part of a network, managed by at least one larger one. Public IP Addresses are at this point in time all managed by big companies who are strategically handing them out to ISPs and corporations to make sure there is no monopoly for public IP Addresses. These private IP Addresses are also the reason why we are still able to use the IPv4 protocol to this day. I've mentioned the IPv4 Address Exhaustion problem. But what I didn't mention was that there also was a second solution apart from the IPv6 protocol. These private ranges were introduced and standardized as a direct result of it. Back in the day large companies used to have all their systems hooked up to a public IP address. The concept of the internet hooking every device together directly was taken way more literal back in the day. But after the IPv4 Address Exhaustion problem became more apperant, and the security risks of having every single device directly exposed to the public internet, had these private ranges way more utilized very soon. With these ranges you can have one centralized point in the network which has a public IP Address, and every subsequent device can use a private one. This way the risk is minimized and IP addresses are also way more available again. The best part, these IP Addresses can be reused by anyone. As long as no two IP Addresses exist in the same network, you can reuse them in a different Network. This is also why most of the Networking work that the average System Engineer deals with, is within these private ranges.
+These are all the ranges there are. These ranges are not directly connected to the internet, but are a part of a network, managed by at least one larger one. Public IP Addresses are at this point in time all managed by big companies who are strategically handing them out to ISPs and corporations to make sure there is no monopoly for public IP Addresses. These private IP Addresses are also the reason why we are still able to use the IPv4 protocol to this day. I've mentioned the IPv4 Address Exhaustion problem. But what I didn't mention was that there also was a second solution apart from the IPv6 protocol. These private ranges were introduced and standardized as a direct result of it. Back in the day large companies used to have all their systems hooked up to a public IP address. The concept of the internet hooking every device together directly was taken way more literal back in the day. But after the IPv4 Address Exhaustion problem became more apparent, and the security risks of having every single device directly exposed to the public internet, had these private ranges way more utilized very soon. With these ranges you can have one centralized point in the network which has a public IP Address, and every subsequent device can use a private one. This way the risk is minimized and IP addresses are also way more available again. The best part, these IP Addresses can be reused by anyone. As long as no two IP Addresses exist in the same network, you can reuse them in a different Network. This is also why most of the Networking work that the average System Engineer deals with, is within these private ranges.
 
 ### Classes
-Of course those aren't the only ranges there are, because there is a second, completely seperate set of ranges. This one is called classes. Certain ranges are dubbed classes as well and you gotta know them at least a little to understand what's coming, so here's a table of what they are. Please not that again, only the first octave matters, the rest *could* be considered important too, but they're really not as the first octave tells you everything you need to know.
+Of course those aren't the only ranges there are, because there is a second, completely separate set of ranges. This one is called classes. Certain ranges are dubbed classes as well and you gotta know them at least a little to understand what's coming, so here's a table of what they are. Please not that again, only the first octave matters, the rest *could* be considered important too, but they're really not as the first octave tells you everything you need to know.
 
 | Class Name | Starting Address | Ending Address |
 |:-----------|:-----------------|:---------------|
@@ -83,14 +83,14 @@ Of course those aren't the only ranges there are, because there is a second, com
 | Class D    | 224.x.x.x        | 239.x.x.x      |
 | Class E    | 240.x.x.x        | 255.x.x.x      |
 
-As you can see in the above table, Class A ranges all the way to 127. But please never forget that even though 127 is technically still Class A, it being localhost most often nullifies anything a class can influence. The only time I had to specify the class of localhost was in a theoretical test at school and even then the correct answer included reminding the teacher of it's localhost property. Apart from that, there really is not much more to them. There are 5 classes in total, ranging from Class A to Class E. However, Class D and Class E really don't matter and are often lumped in with Class C. So that's what I'm going to to as well. From this point forward, Class D and Class E won't be mentioned anymore and are used synonimous with Class C.
+As you can see in the above table, Class A ranges all the way to 127. But please never forget that even though 127 is technically still Class A, it being localhost most often nullifies anything a class can influence. The only time I had to specify the class of localhost was in a theoretical test at school and even then the correct answer included reminding the teacher of it's localhost property. Apart from that, there really is not much more to them. There are 5 classes in total, ranging from Class A to Class E. However, Class D and Class E really don't matter and are often lumped in with Class C. So that's what I'm going to to as well. From this point forward, Class D and Class E won't be mentioned anymore and are used synonymous with Class C.
 
 ---
 
 ## Subnets and Hosts
 I have mentioned networks and their size before. Just above in the table describing the private IPv4 Address Ranges, I used a slash with a number to indicate the network size, but how is any of that actually calculated? How do you look at that number and think "Ah yes, Network *big*". For that we need to recap the Binary Chapter. So if you didn't understand that yet, good luck ahead buddy.
 
-We've discussed that an IP Address consists of 32 bits, seperated into 4 octaves, so there's 4 times 8 bits. The Slash and the number is what we call a Subnet Mask, and it is basically another IP Address, all though it works very differently. An IP Address can have any value from *zero* (0) to 255. A Subnet mask can have only 8 values per octave and a total of 32 values in general. That is because it is filled up from the left to the right.
+We've discussed that an IP Address consists of 32 bits, separated into 4 octaves, so there's 4 times 8 bits. The Slash and the number is what we call a Subnet Mask, and it is basically another IP Address, all though it works very differently. An IP Address can have any value from *zero* (0) to 255. A Subnet mask can have only 8 values per octave and a total of 32 values in general. That is because it is filled up from the left to the right.
 
 | Subnet Mask Binary | Subnet Mask Decimal |
 |:-------------------|---------------------|
@@ -121,7 +121,7 @@ In the above example you should be able to see exactly on which bits the Subnet 
 Again here, I know this is a very complex topic and I can only explain so much and give so many examples. So if there is confusion going on here with a will to learn more, @ me on the server and I'll help out to my best ability.
 
 ### Hosts
-The Amount of Hosts in a Network is calculated rather simply. If we take the example from abox again, with the Subnet Mask of `255.255.224.0`, specifically the Binary Version of it, we only need to count the amount of *zeroes* (0) in it. in this case that would be 13. We have 13 zeroes in the binary version of our Subnet Mask. Now we can use that number as the power of *two* (2) and subtract *two* (2) from the result. So we calculate `2^13-2`.
+The Amount of Hosts in a Network is calculated rather simply. If we take the example from above again, with the Subnet Mask of `255.255.224.0`, specifically the Binary Version of it, we only need to count the amount of *zeroes* (0) in it. in this case that would be 13. We have 13 zeroes in the binary version of our Subnet Mask. Now we can use that number as the power of *two* (2) and subtract *two* (2) from the result. So we calculate `2^13-2`.
 
 That calculation is basically the same as the one that gives us the total amount of IP Addresses that exist. But only limited to the 13 zeroes in the subnet mask that we can manipulate in our Network. Then we subtract two because every Network has a Network Address and a Broadcast Address that we cannot use. That leaves us with the total amount of usable IP Addresses in our Network, which are also called Hosts.
 
@@ -132,7 +132,7 @@ The Network Address is always the lowest possible Address in any Network. It is 
 
 Now it's easy to look at the and think *I understand* but actually calculating it from an IP Address and Subnet Mask might not be. This and the Broadcast Address, which will follow this chapter, have been the one thing I always struggled to explain to others. I promise you that it's not that hard once you get it, but you can't explain it in a very straight forward way.
 
-Now I'd like to remind you of another previous chapter, **Subnets and Hosts**. In that chapter I have said, *"you can only manipulate the bits in the IP Address that correlate to a zero (0) in the Subnet Mask*". What you need to do is set every single one of those manipulatable bits to a zero. I will copy the exact IP Address from that chapter to explain it better.
+Now I'd like to remind you of another previous chapter, **Subnets and Hosts**. In that chapter I have said, *"you can only manipulate the bits in the IP Address that correlate to a zero (0) in the Subnet Mask*". What you need to do is set every single one of those manipulable bits to a zero. I will copy the exact IP Address from that chapter to explain it better.
 
 ```
 IP Address: 192.168.10.100
@@ -144,12 +144,12 @@ Subnet Mask Binary:     11111111.11111111.111|00000.00000000
 Network Address Binary: 11000000.10101000.000|00000.00000000
 ```
 
-So in this example, the Network Address then translates back to *192.168.0.0*. This then results in the lowest IP Address in the entire Network and one of the two we subtraced in the Hosts calculation.
+So in this example, the Network Address then translates back to *192.168.0.0*. This then results in the lowest IP Address in the entire Network and one of the two we subtracted in the Hosts calculation.
 
 ---
 
 ## Broadcast Address
-The use of the Broadcast ID is also very straight forward. Anything that goes through this ID, will be send to every single client which is connected to the Network. It's used to broadcast messages throughout the Network. The Broadcast Address is calculated very similairly to the Network Address. The only difference is that the manipulatable bits are set to *one* (1) instead of *zero* (0). I wont dance around a redundant explaination too long and directly show you the above example again.
+The use of the Broadcast ID is also very straight forward. Anything that goes through this ID, will be send to every single client which is connected to the Network. It's used to broadcast messages throughout the Network. The Broadcast Address is calculated very similarly to the Network Address. The only difference is that the manipulable bits are set to *one* (1) instead of *zero* (0). I wont dance around a redundant explanation too long and directly show you the above example again.
 
 ```
 IP Address: 192.168.10.100
@@ -161,7 +161,7 @@ Subnet Mask Binary:       11111111.11111111.111|00000.00000000
 Broadcast Address Binary: 11000000.10101000.000|11111.11111111
 ```
 
-In this case the Broadcast Address translates back to *192.168.31.255*. This is the higest possible IP Address in that Network. It is also the second IP-Address that we subtract from the Hosts calculation.
+In this case the Broadcast Address translates back to *192.168.31.255*. This is the highest possible IP Address in that Network. It is also the second IP-Address that we subtract from the Hosts calculation.
 
 ---
 
