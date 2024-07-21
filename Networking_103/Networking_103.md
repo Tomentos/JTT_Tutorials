@@ -38,17 +38,17 @@ Explaining what the binary system is, doesn't take very long. Displaying informa
 
 IPv4 Addresses builds up on the principle of Binary. Unlike the MAC-Address and IPv6 Addresses, which both build upon the Hexadecimal system. Now first we need to understand how exactly this system uses Binary. I already said above that it consists of 4 number segments, also called octaves, which in turn then consist on 8 bits, which are just binary characters. So each of these numbers can only go as high as 8 binary characters can go, which is 255. If we spread these 8 bits out, the leftmost bit has the lowest value. The value then doubles with every bit we add to the left. This tables attempts to visualize that to create a better understanding.
 
-| | Bit #8 | Bit #7 | Bit #6 | Bit #5 | Bit #4 | Bit #3 | Bit #2 | Bit #1 |
+|                   | Bit #8 | Bit #7 | Bit #6 | Bit #5 | Bit #4 | Bit #3 | Bit #2 | Bit #1 |
 |:------------------|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|
-| **Binary Value** | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
-| **Decimal Value** | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+| **Binary Value**  | 1      | 1      | 1      | 1      | 1      | 1      | 1      | 1      |
+| **Decimal Value** | 128    | 64     | 32     | 16     | 8      | 4      | 2      | 1      |
 
 If we now add all the decimal values, you would get the number 255. Meaning that the Binary number of `11111111` equals to the decimal number `255`. I will now have a table below where not every binary position is 1 as an example for how the number would change.
 
-| | Bit #8 | Bit #7 | Bit #6 | Bit #5 | Bit #4 | Bit #3 | Bit #2 | Bit #1 |
+|                   | Bit #8 | Bit #7 | Bit #6 | Bit #5 | Bit #4 | Bit #3 | Bit #2 | Bit #1 |
 |:------------------|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|
-| **Binary Value** | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
-| **Decimal Value** | 128 | 64 | 0 | 0 | 8 | 0 | 2 | 0 |
+| **Binary Value**  | 1      | 1      | 0      | 0      | 1      | 0      | 1      | 0      |
+| **Decimal Value** | 128    | 64     | 0      | 0      | 8      | 0      | 2      | 0      |
 
 Every column in which the binary number is *zero* (0), the decimal number also turns into *zero* (0) as it is only a decimal representation. If you now add all these numbers together, you get 202. Meaning that the Binary number `11001010` equals to the decimal number `202`.
 
@@ -64,11 +64,11 @@ With a range, an actual static range of IP Addresses is meant. I already mention
 When it comes to everything else, we have something called *Private Ranges* and *Public Ranges*.
 Private addresses are what your are using right now. I'm putting money on that fact. There's only *three* (3) different private ranges and they aren't that large.
 
-| Network | Lowest IP Address in range | Highest IP Address in range |
+| Network         | Lowest IP Address in range | Highest IP Address in range |
 |:----------------|:---------------------------|:----------------------------|
-| 10.0.0.0 /8 | 10.0.0.0 | 10.255.255.255 |
-| 172.16.0.0 /12 | 172.16.0.0 | 172.31.255.255 |
-| 192.168.0.0 /16 | 192.168.0.0 | 192.168.255.255 |
+| 10.0.0.0 /8     | 10.0.0.0                   | 10.255.255.255              |
+| 172.16.0.0 /12  | 172.16.0.0                 | 172.31.255.255              |
+| 192.168.0.0 /16 | 192.168.0.0                | 192.168.255.255             |
 
 These are all the ranges there are. These ranges are not directly connected to the internet, but are a part of a network, managed by at least one larger one. Public IP Addresses are at this point in time all managed by big companies who are strategically handing them out to ISPs and corporations to make sure there is no monopoly for public IP Addresses. These private IP Addresses are also the reason why we are still able to use the IPv4 protocol to this day. I've mentioned the IPv4 Address Exhaustion problem. But what I didn't mention was that there also was a second solution apart from the IPv6 protocol. These private ranges were introduced and standardized as a direct result of it. Back in the day large companies used to have all their systems hooked up to a public IP address. The concept of the internet hooking every device together directly was taken way more literal back in the day. But after the IPv4 Address Exhaustion problem became more apparent, and the security risks of having every single device directly exposed to the public internet, had these private ranges way more utilized very soon. With these ranges you can have one centralized point in the network which has a public IP Address, and every subsequent device can use a private one. This way the risk is minimized and IP addresses are also way more available again. The best part, these IP Addresses can be reused by anyone. As long as no two IP Addresses exist in the same network, you can reuse them in a different Network. This is also why most of the Networking work that the average System Engineer deals with, is within these private ranges.
 
