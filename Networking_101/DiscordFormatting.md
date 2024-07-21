@@ -1,4 +1,5 @@
 Networking 101 - The basics
+Welcome to hell 🔥 🔥
 
 You want to learn networking? Then you gotta start at the bottom. Bottom meaning how a network is built, physically and what that even is would be good to know too.
 
